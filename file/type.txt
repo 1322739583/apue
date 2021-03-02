@@ -1,0 +1,13 @@
+
+lrwxrwxrwx  1 root root         13  3月  2 15:21 fd -> /proc/self/fd
+drwxr-xr-x  4 root root        460  3月  2 17:39 input
+lrwxrwxrwx  1 root root         28  3月  2 15:21 log -> /run/systemd/journal/dev-log
+brw-rw----  1 root disk     8,   0  3月  2 15:21 sda
+brw-rw----  1 root disk     8,   1  3月  2 15:21 sda1
+brw-rw----  1 root disk     8,   2  3月  2 15:21 sda2
+lrwxrwxrwx  1 root root         15  3月  2 15:21 stderr -> /proc/self/fd/2
+lrwxrwxrwx  1 root root         15  3月  2 15:21 stdin -> /proc/self/fd/0
+lrwxrwxrwx  1 root root         15  3月  2 15:21 stdout -> /proc/self/fd/1
+crw-rw-rw-  1 root tty      5,   0  3月  2 15:21 tty
+crw-rw-rw-  1 root tty      4,   0  3月  2 15:21 tty0
+crw-rw-rw-  1 root tty      4,   1  3月  2 15:21 tty1
