@@ -1,0 +1,12 @@
+     1                                  start:
+     2 00000000 B8FFFF                  mov ax,65535
+     3 00000003 BBFFFF                  mov bx,65535
+     4 00000006 31D2                    xor dx,dx
+     5 00000008 F7F3                    div bx
+     6                                  
+     7                                  ;56666/10  商存放在ax(5666),余数存放在dx
+     8                                  ;100/10    商存放在al(10),
+     9                                  
+    10                                  current:
+    11 0000000A 00<rep 1F4h>            times 510-(current-start) db 0
+    12 000001FE 55AA                    db 0x55,0xaa
