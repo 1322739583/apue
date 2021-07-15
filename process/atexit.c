@@ -1,13 +1,7 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
-#include<fcntl.h>
-#include<sys/stat.h>
-#include<sys/types.h>
-#include<string.h>
+#include "../apue.h"
 
- void my_exit1(void);
- void my_exit2(void);
+ static void my_exit1(void);
+static void my_exit2(void);
 
 int main(int argc, char const *argv[])
 {
@@ -24,14 +18,15 @@ int main(int argc, char const *argv[])
     }
     
     printf("main is done\n");
-   // return 0;
-   exit(0);
+     return 0;
+    printf("after return\n");
+   //exit(0);
 }
 
- void my_exit1(void){
+static void my_exit1(void){
     printf("first exit handler\n");
 }
 
- void my_exit2(void){
+static void my_exit2(void){
     printf("second exit handler\n");
 }

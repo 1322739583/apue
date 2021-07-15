@@ -11,7 +11,11 @@ int main()
     int n;
     char buf[1024]="this is line one";
 
-    int fd=open("cowsay.txt",O_CREAT+O_RDWR);
+    int fd=open("cowsay.txt",O_CREAT+O_RDWR,PERM);
+    if (fd!=-1){
+        perror("file not exist\n");
+        exit(0);
+    }
     printf("fd=%d\n",fd);
     int buff_size=strlen(buf);
     size_t num=write(fd,buf,buff_size);
