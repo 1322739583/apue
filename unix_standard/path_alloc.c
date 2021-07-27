@@ -41,7 +41,7 @@ char *path_alloc(size_t *sizep) {
             } else {
                 perror("pathconf error for _PC_PATH_MAX");
                 exit(1);
-            }
+            }     
         } else {
             pathmax++;
         }

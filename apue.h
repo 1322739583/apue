@@ -13,4 +13,10 @@
 #include<sys/types.h>
 #include<string.h>
 
+void err_sys(char *info){
+    perror(info);
+    exit(1);
+}
+
+
 #endif //LINUX_APUE_H

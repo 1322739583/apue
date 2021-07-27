@@ -10,7 +10,7 @@ int main(int argc,char* argv[]){
     char *path=argv[0];
     strcat(path,"/wordy");
 
-    printf("path=:%s",path);
+    vsprintf("path=:%s",path);
     if((fp=fopen(path,"a+"))==NULL){
         fprintf(stdout,"Can't open \"wordy\" file.\n");
         exit(EXIT_FAILURE);

@@ -25,6 +25,8 @@ int main(int argc, char *argv[]) {
     printf("no sysbol for _SC_ARG_MAX\n");
 #endif
 /*******similar for all the sysconf symbols*************/
+
+    pr_sysconf("SC_CLK_TCK ",_SC_CLK_TCK);
 return 0;
 }
 

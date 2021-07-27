@@ -1,4 +1,5 @@
 #include<errno.h>
+#include "../../apue.h"
 static pid_t *childpid=NULL;
 
 static int maxfd;

@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     arr[4]='n';//
     arr[5]='\0';//
     puts(arr);
-  //  printf("%s\n",arr);
+   printf("%s\n",arr);
 //    for (int i = 0; i <6 ; ++i) {
 //        printf("%c",arr[i]);
 //    }
