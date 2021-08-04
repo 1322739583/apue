@@ -12,8 +12,9 @@ writen(int fd, const void *vptr, size_t n) {
   const char *ptr;
 
   ptr = vptr;
-  nleft = n;
+  nleft = n;//剩余的，这个非常的合理，指定的只是buf的一部分
   while (nleft > 0) {
+
     if ((nwritten = write(fd, ptr, nleft)) <= 0) {
       if (errno == EINTR)
         //设为0，nleft和ptr-=和+=后都没有变化，会重新进入write。
