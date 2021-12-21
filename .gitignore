@@ -1,3 +1,7 @@
 cmake_demo/CMakeFiles/
 build/
-.vscode/
+.cache/
+cmake-build-debug/
+debug/
+*.o
+

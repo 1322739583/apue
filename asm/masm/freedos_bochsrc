@@ -1,0 +1,11 @@
+megs: 32
+romimage: file=/usr/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/usr/share/bochs/VGABIOS-lgpl-latest
+vga: extension=vbe, update_freq=15
+floppya: 1_44=freedos_a.img, status=inserted
+floppyb: 1_44=freedos_b.img, status=inserted
+ata0-master: type=disk, path=freedos_c.img, cylinders=306, heads=4, spt=17
+boot: c
+log: bochsout.txt
+mouse: enabled=0
+cpu: ips=15000000
