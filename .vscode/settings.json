@@ -29,5 +29,7 @@
     "[Monokai Dimmed]": {}
     },
     "editor.fontSize": 16,
-    "editor.fontLigatures": null
+    "editor.fontLigatures": null,
+    "masmtasm.ASM.emulator": "msdos player",
+    "masmtasm.ASM.MASMorTASM": "MASM"
 }

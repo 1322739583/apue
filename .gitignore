@@ -4,4 +4,6 @@ build/
 cmake-build-debug/
 debug/
 *.o
+*.obj
+*.exe
 

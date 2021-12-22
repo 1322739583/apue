@@ -3,7 +3,7 @@ assume cs:code,ds:data
 data segment
     ;需要转成小写的字符串
     db 'BaSiC'
-    db 'iNforMatiOn'
+    db 'iNfOrMatiOn'
 data ends
 
 code segment
@@ -17,9 +17,9 @@ start: mov ax,data
     ;先循环BaSic，有5个字符
     mov cx,5
 ;第一个循环，用来循环iNforMatiOn
-s: mov al,[bx]
+s:  
     
-    and al,11011111B
+    and [bx],11011111B
     mov [bx],al
     inc bx
     loop s
@@ -30,9 +30,8 @@ s: mov al,[bx]
     ;循环iNforMatiOn需要11次
     mov cx,11
 ;第二个循环，用来循环BaSic
-s0:  mov al,[bx]
-   
-    or al,00010000B
+s0:  
+    or [bx],00100000B
     mov [bx],al
     inc bx
     loop s0
@@ -40,4 +39,4 @@ s0:  mov al,[bx]
     mov ax,4c00h
     int 21h
 code ends
-end
+end start
