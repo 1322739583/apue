@@ -1,0 +1,49 @@
+GAS LISTING print_cpuid_c.s 			page 1
+
+
+   1              	#打印CPUID
+   2              	.section .data
+   3              	#初始化代码
+   4              	output:
+   5              	    #12位CPUID
+   6 0000 54686520 	    .asciz "The processor Venfor ID is '%s'\n"
+   6      70726F63 
+   6      6573736F 
+   6      72205665 
+   6      6E666F72 
+   7              	.section .bss
+   8              	#未初始化代码
+   9              	    .lcomm buffer,12
+  10              	.section .text
+  11              	.globl main
+  12              	main:
+  13 0000 90       	    nop
+  14 0001 B8000000 	    movl $0,%eax#this is an instruction
+  14      00
+  15 0006 0FA2     	    cpuid#move the value output to edi
+  16 0008 BF000000 	    movl $buffer,%edi
+  16      00
+  17 000d 891F     	    movl %ebx,(%edi)
+  18 000f 895704   	    movl %edx,4(%edi)
+  19 0012 894F08   	    movl %ecx,8(%edi)
+  20 0015 68000000 	    pushl $buffer
+  20      00
+  21 001a 68000000 	    pushl $output
+  21      00
+  22 001f E8FCFFFF 	    call printf
+  22      FF
+  23 0024 83C408   	    addl $8,%esp
+  24 0027 6A00     	    pushl $0
+  25 0029 E8FCFFFF 	    call exit
+  25      FF
+GAS LISTING print_cpuid_c.s 			page 2
+
+
+DEFINED SYMBOLS
+     print_cpuid_c.s:4      .data:0000000000000000 output
+     print_cpuid_c.s:9      .bss:0000000000000000 buffer
+     print_cpuid_c.s:12     .text:0000000000000000 main
+
+UNDEFINED SYMBOLS
+printf
+exit

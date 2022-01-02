@@ -8,4 +8,5 @@ debug/
 *.exe
 *.EXE
 *.OBJ
+*.out
 

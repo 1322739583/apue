@@ -4,6 +4,7 @@ stack segment
 stack ends
 code segment
     mov ax,4c00h
+
     int 21h
 start:
    mov ax,stack
