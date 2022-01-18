@@ -78,3 +78,8 @@ add_executable(write ipc/pipe/write.c)
 
 add_executable(create_array memery/create_array.c)
 add_executable(getopt args/getopt.c)
+add_executable(fileUtils file/fileUtils.c)
+add_executable(test_fwrite file/test_fwrite.c)
+add_executable(test_fopen file/test_fopen.c)
+add_executable(test_fseek file/test_fseek.c)
+add_executable(test_fputs_fwrite_fprintf file/test_fputs_fwrite_fprintf.c)

@@ -32,4 +32,5 @@
     "editor.fontLigatures": null,
     "masmtasm.ASM.emulator": "msdos player",
     "masmtasm.ASM.MASMorTASM": "MASM"
+   
 }
